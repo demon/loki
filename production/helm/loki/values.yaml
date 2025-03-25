@@ -130,7 +130,7 @@ loki:
   ######################################################################################################################
 
   # -- Defines what kind of object stores the configuration, a ConfigMap or a Secret.
-  # In order to move sensitive information (such as credentials) from the ConfigMap/Secret to a more secure location (e.g. vault), it is possible to use [environment variables in the configuration](https://grafana.com/docs/loki/latest/configuration/#use-environment-variables-in-the-configuration).
+  # In order to move sensitive information (such as credentials) from the ConfigMap/Secret to a more secure location (e.g. vault), it is possible to use [environment variables in the configuration](https://grafana.com/docs/loki/latest/configure/#use-environment-variables-in-the-configuration).
   # Such environment variables can be then stored in a separate Secret and injected via the global.extraEnvFrom value. For details about environment injection from a Secret please see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/#use-case-as-container-environment-variables).
   configStorageType: ConfigMap
   # -- The name of the object which Loki will mount as a volume containing the config.
@@ -333,7 +333,7 @@ loki:
   extraMemberlistConfig: {}
   # -- Tenants list to be created on nginx htpasswd file, with name and password keys
   tenants: []
-  # -- Check https://grafana.com/docs/loki/latest/configuration/#server for more info on the server configuration.
+  # -- Check https://grafana.com/docs/loki/latest/configure/#server for more info on the server configuration.
   server:
     http_listen_port: 3100
     grpc_listen_port: 9095
@@ -349,7 +349,7 @@ loki:
     volume_enabled: true
   # -- Provides a reloadable runtime configuration file for some specific configuration
   runtimeConfig: {}
-  # -- Check https://grafana.com/docs/loki/latest/configuration/#common_config for more info on how to provide a common configuration
+  # -- Check https://grafana.com/docs/loki/latest/configure/#common for more info on how to provide a common configuration
   commonConfig:
     path_prefix: /var/loki
     replication_factor: 3
